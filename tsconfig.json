@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -19,8 +20,7 @@
     "target": "es2020",
     "module": "es2020",
     "lib": [
-      "es2020",
-      "dom"
+      "es5", "es6", "dom", "dom.iterable"
     ]
   },
   "angularCompilerOptions": {
@@ -28,5 +28,6 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+
 }

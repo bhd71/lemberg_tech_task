@@ -1,0 +1,14 @@
+<header id="scroll_top">
+  <div class="navigation">
+    <app-logo></app-logo>
+    <app-navigation></app-navigation>
+    <app-dropdown (emitData)="emittedDataByChild($event)"></app-dropdown>
+  </div>
+  <div class="list">
+    <app-dropdown-navigation [item]="childData"></app-dropdown-navigation>
+  </div>
+  <div class="description">
+    <app-description></app-description>
+    <app-helmet></app-helmet>
+  </div>
+</header>

@@ -1,0 +1,25 @@
+@use '../../../../assets/variables';
+
+.heading {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+
+  p {
+    font-size: 2.7rem;
+    font-weight: bold;
+
+    span {
+      color: variables.$my-yellow;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 75%;
+  }
+}

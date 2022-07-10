@@ -1,0 +1,87 @@
+@use '../../../../assets/variables';
+
+article {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 2/3rem;
+  }
+
+  margin: 0 auto 50px auto;
+  border-radius: 16px;
+  padding: 40px;
+  width: 55%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .form_input {
+    p {
+      padding: 0;
+    }
+
+    textarea {
+      width: 50%;
+      border: none;
+      border-bottom: black 2px solid;
+      padding-bottom: 20px;
+      resize: none;
+    }
+
+    input {
+      width: 50%;
+      border: none;
+      border-bottom: black 2px solid;
+    }
+
+  }
+
+  .not_valid {
+    input {
+      border-bottom: red 2px solid !important;
+    }
+
+    p {
+      color: red;
+    }
+
+  }
+
+  .invalid_text {
+    font-size: 0.7rem;
+  }
+
+  .main-form__submit {
+    margin-top: 30px;
+    background-color: variables.$my-yellow;
+    width: 20%;
+    padding: 22px 32px;
+    border-radius: 8px;
+    border: none;
+    min-width: 150px;
+    box-shadow: rgba(0, 0, 0, 0.08) 3px 3px 2.6px;
+    font-weight: bold;
+  }
+  
+}
+
+@media (max-width: variables.$my-resolution-phone) {
+
+  .form_input {
+    input {
+      width: 100% !important;
+    }
+
+    textarea {
+      border: none !important;
+      width: 100%;
+    }
+  }
+}

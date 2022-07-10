@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@use './assets/variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&family=Ubuntu:wght@300&display=swap');
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+html, body {
+  height: auto !important;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 15px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #3d3939;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1c1c1c;
+}
+
+
+@media (max-width: variables.$my-resolution-phone) {
+  html {
+    font-size: 14px;
+
+  }
+  body {
+  }
+}

@@ -1,0 +1,27 @@
+@use '../../../../assets/variables';
+
+.header-navigation {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+
+  .header-navigation__contact {
+    background-color: white;
+    border-radius: 12px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: variables.$my-resolution-phone) {
+  .header-navigation {
+    display: none;
+  }
+
+}
+

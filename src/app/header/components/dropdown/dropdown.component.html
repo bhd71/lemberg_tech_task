@@ -1,0 +1,6 @@
+<div class="header-dropdown">
+  <img *ngIf="!clicked; else elseBlock" src="assets/dropdown.png" (click)="sendData()" alt="">
+  <ng-template #elseBlock>
+    <span (click)="sendData()" class="X">&#10005;</span>
+  </ng-template>
+</div>

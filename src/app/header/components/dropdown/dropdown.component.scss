@@ -1,0 +1,18 @@
+@use '../../../../assets/variables';
+
+.header-dropdown {
+  display: none;
+  width: 30px;
+
+  .X {
+    font-size: 2rem;
+
+  }
+
+}
+
+@media (max-width: variables.$my-resolution-phone) {
+  .header-dropdown {
+    display: block;
+  }
+}

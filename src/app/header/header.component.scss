@@ -1,0 +1,59 @@
+@use '../../assets/variables';
+
+header {
+  padding-top: 30px;
+  background-color: variables.$my-yellow;
+  display: flex;
+  flex-direction: column;
+
+  .navigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  app-dropdown {
+    display: none;
+  }
+
+}
+
+.description {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+
+  app-description {
+    width: 55%;
+  }
+
+  app-helmet {
+    width: 45%;
+  }
+}
+
+@media (max-width: variables.$my-resolution-tablet) {
+}
+
+@media (max-width: variables.$my-resolution-phone) {
+  header {
+    app-dropdown {
+      display: inline;
+    }
+  }
+  .description {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+
+
+    app-description {
+      width: 100%;
+    }
+
+    app-helmet {
+      width: 100%;
+    }
+  }
+
+}

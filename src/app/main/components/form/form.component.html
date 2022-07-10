@@ -1,0 +1,32 @@
+<article id="scroll_bottom">
+  <form (ngSubmit)="submitHandler()" class="main_form">
+
+    <label [className]="name.valid ? 'form_input' : 'not_valid form_input'">
+      <p>Full name</p>
+      <input type="text" [(ngModel)]="name.value" name="name" (change)="validation_name(name.value)" autocomplete="off">
+      <p *ngIf="!name.valid" class="invalid_text">{{name.text}}</p>
+    </label>
+    <label [className]="companyName.valid ? 'form_input' : 'not_valid form_input'">
+      <p>Company Name</p>
+      <input type="text" [(ngModel)]="companyName.value" name="companyName"
+             (change)="validation_companyName(companyName.value)" autocomplete="off">
+      <p *ngIf="!companyName.valid" class="invalid_text">{{companyName.text}}</p>
+    </label>
+    <label [className]="phone.valid ? 'form_input' : 'not_valid form_input'">
+      <p>Phone Number</p>
+      <input type="text" [(ngModel)]="phone.value" name="phone" (change)="validation_phone(phone.value)">
+      <p *ngIf="!phone.valid" class="invalid_text">{{phone.text}}</p>
+    </label>
+    <label [className]="email.valid ? 'form_input' : 'not_valid form_input'">
+      <p>E-mail</p>
+      <input type="text" [(ngModel)]="email.value" name="email" (change)="validation_email(email.value)">
+      <p *ngIf="!email.valid" class="invalid_text">{{email.text}}</p>
+    </label>
+    <label class="form_input">
+      <p>Write Us Messages</p>
+      <textarea [(ngModel)]="message.value" name="message"></textarea>
+    </label>
+    <!--    <input type="submit" value="Send Message" class="main-from__submit">-->
+    <button type="submit" class="main-form__submit">Send Message</button>
+  </form>
+</article>

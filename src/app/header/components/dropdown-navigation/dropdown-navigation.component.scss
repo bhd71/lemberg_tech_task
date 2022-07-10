@@ -1,0 +1,73 @@
+@use '../../../../assets/variables';
+
+.header-dropdown_list {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  visibility: hidden;
+  padding: 50px 0 0 80px;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  background-color: variables.$my-yellow;
+  overflow-y: hidden;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.false {
+  animation-name: running-off;
+  animation-duration: 1s;
+  position: absolute;
+  left: 300%;
+}
+
+.true {
+  animation-name: running-on;
+  animation-duration: 1.5s;
+  left: 0;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+
+@keyframes running-on {
+  from {
+    left: 100%
+  }
+  to {
+    left: 0
+  }
+}
+
+@keyframes running-off {
+  from {
+    left: 0
+  }
+  to {
+    left: 150%;
+  }
+}
+
+@media (max-width: variables.$my-resolution-tablet) {
+  .header-dropdown_list {
+    visibility: visible;
+  }
+
+}
